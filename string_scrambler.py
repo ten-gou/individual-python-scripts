@@ -2,10 +2,9 @@ import random
 
 
 def main():
-    print('Please input a string to scramble, or input QUIT to quit')
-    baseString = input()
+    baseString = input('Please input a string to scramble, or input QUIT to quit: ')
 
-    while baseString != "QUIT":
+    while baseString.upper() != "QUIT":
         baseLength = len(baseString) - 1
         baseArray = [*baseString]
         print("Scrambling '" + baseString + "', with a length of " + str(baseLength + 1))
@@ -20,7 +19,6 @@ def main():
             i += 1
 
         print(scrambledString)
-        print('Please input a string to scramble, or input QUIT to quit')
-        baseString = input()
+        baseString = input('Next input: ')
 
 main()
